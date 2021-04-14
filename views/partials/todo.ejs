@@ -1,0 +1,32 @@
+<div class="container-fuild">
+
+    <div class="todo-welcome d-flex flex-column ">
+        <h3 class="text-center" data-id="<%= data.user._id%>">Welcome <%= data.user.name%> !</h3>
+        <a class="btn btn-custom text-decoration-underline" href="/logout">Log Out</a>
+    </div>
+
+
+    <form class="task-input-form d-flex justify-content-center" action="/todo" method="POST">
+        <input class="task-input" type="text" name="task" placeholder="Press enter to save" autocomplete="off" required>   
+        <button class="task-submit" type="submit" name="submit"><i class="fas fa-plus"></i></button>
+        
+    </form>
+
+    <div class="container-fuild todo-data"> 
+        <% for(let i=0; i< data.userTasks.length; i++) {%>
+            <div class="task-line d-flex">
+                    
+                 <p><%=data.userTasks[i].task%></p>
+                <div class="deleteform ms-auto">
+                <form action="/todo" method="POST"> 
+                    <button class="delete text-decoration-none" type="submit" name="dropid" value="<%= data.userTasks[i].task%>">
+                        <i class="drop fas fa-times"></i>
+                        </button> 
+                </form>
+             </div>
+            </div> 
+             <% } %>
+
+    </div>
+
+</div> 

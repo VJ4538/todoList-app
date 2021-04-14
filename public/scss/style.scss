@@ -1,0 +1,148 @@
+//vars
+@use 'vars';
+//mixins
+@mixin set-input-box($tb, $lr){
+    outline:none;
+    border:none;
+    padding:$tb $lr;
+}
+@mixin set-font($size, $weight){
+    font-size:$size;
+    font-family: 'New Tegomin', serif;
+    font-weight:$weight;
+}
+//Extend
+%button-present{
+    padding:0.5rem;
+    font-size:1rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+body{
+    @include set-font(1rem, 400);
+    background-color:vars.$background;
+    color:vars.$text-color;
+}
+//Container
+.container-fuild{
+    padding:5% 3%;
+}
+//btn
+.btn-custom{
+    @extend %button-present;
+    &:active{
+        border-color:vars.$text-color;
+        color:vars.$text-color;
+    }
+}
+
+//home page, register page
+    //form
+.form-title{
+    font-size:1.2rem;
+}
+.user-forms{
+    background-color:vars.$white;
+    padding:1rem;
+    border-radius: 0.5rem;
+    h3{
+        font-size:1rem;
+    }
+}
+.form-floating,.form-btn-group,.google-signin{
+    margin:0.75rem 0.5rem;
+}
+.form-btn-group{
+    flex-direction: column;
+    button{
+        margin-top:1rem;
+    }
+}
+//google login signup
+    .google-signin{
+        .card-body{
+            padding:0rem;
+        }
+        .g-btn{
+            &:active{
+                border-color:vars.$text-color;
+                color:vars.$text-color;
+            }
+        }
+    }
+//task page
+.todo-welcome{
+    h3{
+        font-size:1.2rem;
+    }
+    .btn-custom{
+        border:none;
+    }
+}
+//task-input-form
+.task-input-form{
+    margin-top:20px;
+}
+.task-input{
+    @include set-input-box(5px,20px);
+    @include set-font(1.2rem, "bold");
+    padding-right:0px;
+    width:100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.task-submit{
+    @include set-input-box(2px,12px);
+    @include set-font(1.2rem, "bold");
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color:vars.$white;
+    color:vars.$text-color;
+    &:hover{
+        color:vars.$hover;
+    }
+}
+//deleting 
+.delete{
+    background-color:transparent;
+    border:none;
+    font-size:1.2rem;
+    color:vars.$text-color;
+    margin-left:10px;
+}
+.todo-data{
+    margin-top:20px;
+    padding:3% 1% !important;
+}
+
+//media query
+//Tablet screen size bigger than 425px
+@media screen and (min-width: 426px) {
+    .container-fuild{
+        padding:4% 8%;
+    }
+    .welcome{
+        h3{
+            font-size:1.5rem;
+        }
+    }
+}
+
+//desktop screen size bigger than 768px
+@media screen and (min-width: 769px) {
+    .container-fuild{
+        padding:2% 13%;
+    }
+    .form-btn-group{
+        flex-direction: row;
+        a{
+            width:45%;
+        }
+        button{
+            width:45%;
+            margin-left:auto;
+            margin-top:0;
+        }
+    }   
+}

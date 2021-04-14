@@ -1,0 +1,137 @@
+.btn-custom {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "New Tegomin", serif;
+  font-weight: 400;
+  background-color: #f0e4d7;
+  color: #ff7171;
+}
+
+.container-fuild {
+  padding: 5% 3%;
+}
+
+.btn-custom:active {
+  border-color: #ff7171;
+  color: #ff7171;
+}
+
+.form-title {
+  font-size: 1.2rem;
+}
+
+.user-forms {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.user-forms h3 {
+  font-size: 1rem;
+}
+
+.form-floating, .form-btn-group, .google-signin {
+  margin: 0.75rem 0.5rem;
+}
+
+.form-btn-group {
+  flex-direction: column;
+}
+.form-btn-group button {
+  margin-top: 1rem;
+}
+
+.google-signin .card-body {
+  padding: 0rem;
+}
+.google-signin .g-btn:active {
+  border-color: #ff7171;
+  color: #ff7171;
+}
+
+.todo-welcome h3 {
+  font-size: 1.2rem;
+}
+.todo-welcome .btn-custom {
+  border: none;
+}
+
+.task-input-form {
+  margin-top: 20px;
+}
+
+.task-input {
+  outline: none;
+  border: none;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  font-family: "New Tegomin", serif;
+  font-weight: "bold";
+  padding-right: 0px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.task-submit {
+  outline: none;
+  border: none;
+  padding: 2px 12px;
+  font-size: 1.2rem;
+  font-family: "New Tegomin", serif;
+  font-weight: "bold";
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #fff;
+  color: #ff7171;
+}
+.task-submit:hover {
+  color: #dd2929;
+}
+
+.delete {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #ff7171;
+  margin-left: 10px;
+}
+
+.todo-data {
+  margin-top: 20px;
+  padding: 3% 1% !important;
+}
+
+@media screen and (min-width: 426px) {
+  .container-fuild {
+    padding: 4% 8%;
+  }
+
+  .welcome h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .container-fuild {
+    padding: 2% 13%;
+  }
+
+  .form-btn-group {
+    flex-direction: row;
+  }
+  .form-btn-group a {
+    width: 45%;
+  }
+  .form-btn-group button {
+    width: 45%;
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
